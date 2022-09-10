@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react'
-import { withErrorApi } from '../../hoc-helpers/withErrorApi'
-import { getApiResource } from '../../utils/network'
-import { API_PEOPLE } from '../../constants/api'
-import { getPeopleId, getPeopleImage } from '../../services/getPeopleData'
-import PeopleList from '../../components/People/PeopleList'
+import React, { useState, useEffect } from 'react'
+import { withErrorApi } from '@hoc-helpers/withErrorApi'
+import { getApiResource } from '@utils/network'
+import { API_PEOPLE } from '@constants/api'
+import { getPeopleId, getPeopleImage } from '@services/getPeopleData'
+import PeopleList from '@components/People/PeopleList'
 import styles from './People.module.css'
 
 const People = ({ setErrorApi }) => {
