@@ -1,27 +1,34 @@
 import { useState, useEffect } from 'react'
+import { withErrorApi } from '../../hoc-helpers/withErrorApi'
 import { getApiResource } from '../../utils/network'
 import { API_PEOPLE } from '../../constants/api'
 import { getPeopleId, getPeopleImage } from '../../services/getPeopleData'
 import PeopleList from '../../components/People/PeopleList'
 import styles from './People.module.css'
 
-const People = () => {
+const People = ({ setErrorApi }) => {
   const [people, setPeople] = useState(null)
 
   const getResource = async (url) => {
     const data = await getApiResource(url)
-    const peopleList = data.results.map(({name, url}) => {
-      const id = getPeopleId(url)
-      const img = getPeopleImage(id)
 
-      return {
-        id,
-        name,
-        img
-      }
-    })
+    if (data) {
+      const peopleList = data.results.map(({name, url}) => {
+        const id = getPeopleId(url)
+        const img = getPeopleImage(id)
+  
+        return {
+          id,
+          name,
+          img
+        }
+      })
 
-    setPeople(peopleList)
+      setPeople(peopleList)
+      setErrorApi(false)
+    } else {
+      setErrorApi(true)
+    }
   }
 
   useEffect(() => {
@@ -35,4 +42,4 @@ const People = () => {
   )
 }
 
-export default People
+export default withErrorApi(People)

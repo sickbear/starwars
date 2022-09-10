@@ -1,0 +1,7 @@
+.text{
+  width: 600px;
+  margin: 100px auto 0;
+  color: var(--color-black);
+  font-size: var(--font-size-title);
+  text-align: center;
+}
