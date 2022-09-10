@@ -1,4 +1,5 @@
-import './App.css';
+import cn from 'classnames'
+import styles from './App.module.css'
 
 const App = () => {
   return (
@@ -6,4 +7,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App
