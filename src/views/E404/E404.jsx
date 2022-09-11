@@ -4,7 +4,7 @@ import styles from './E404.module.css'
 const E404 = () => {
   return (
     <>
-      <h1>Error</h1>
+      <h1>404</h1>
     </>
   )
 }
