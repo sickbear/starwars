@@ -4,6 +4,7 @@ module.exports = function override(config) {
   alias({
     '@src': 'src',
     '@components': 'src/components',
+    '@ui': 'src/components/UI',
     '@constants': 'src/constants',
     '@views': 'src/views',
     '@hoc-helpers': 'src/hoc-helpers',
