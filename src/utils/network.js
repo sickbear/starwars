@@ -1,3 +1,8 @@
+/**
+ * Отправляет запрос
+ * @param {String} url - url запроса
+ * @returns {Promise} - Promise с результатом запроса
+ */
 export const getApiResource = async (url) => {
   try {
     const res = await fetch(url)
