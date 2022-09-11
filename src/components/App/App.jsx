@@ -1,10 +1,14 @@
 import React from 'react'
-import People from '@views/People'
+import Header from '@components/Header'
+import RouterView from '@src/routes.config'
 import styles from './App.module.css'
 
 const App = () => {
   return (
-    <People />
+    <>
+      <Header />
+      <RouterView />
+    </>
   )
 }
 

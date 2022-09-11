@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
-import { getApiResource } from '@utils/network'
-import { API_PEOPLE } from '@constants/api'
-import { getPeopleId, getPeopleImage } from '@services/getPeopleData'
 import PeopleList from '@components/People/PeopleList'
+import { getApiResource } from '@utils/network'
+import { getPeopleId, getPeopleImage } from '@services/getPeopleData'
+import { API_PEOPLE } from '@constants/api'
 import styles from './People.module.css'
 
 const People = ({ setErrorApi }) => {
@@ -40,6 +41,10 @@ const People = ({ setErrorApi }) => {
       {people && <PeopleList people={people} />}
     </>
   )
+}
+
+PeopleList.propTypes = {
+  setErrorApi: PropTypes.func
 }
 
 export default withErrorApi(People)
