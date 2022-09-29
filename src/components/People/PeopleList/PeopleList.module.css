@@ -10,7 +10,7 @@
   width: 190px;
   margin: var(--spacing-medium);
   border-radius: var(--border-radius-small);
-  background-color: var(--color-dark-white);
+  background-color: var(--color-white);
   cursor: pointer;
 }
 .link{

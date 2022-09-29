@@ -1,14 +1,31 @@
 :root{
   --color-main-bg: #fbfbfb;
   --color-black: #1a1818;
-  --color-dark-white: #fff;
+  --color-white: #fff;
+  --color-yellow: #97971481;
+  --color-blue: #6a83fb;
 
   --border-radius-small: 10px;
 
+  --spacing-ultrasmall: 5px;
+  --spacing-small: 10px;
   --spacing-medium: 20px;
+  --spacing-large: 30px;
 
   --font-famaly-main: sans-serif;
   --font-size-title: 26px;
+  --font-bold: 600;
+
+  --width-max: 1260px;
+
+  --text-shadow-yellow:
+    0 0 2px var(--color-white),
+    0 0 10px var(--color-blue);
+
+  --transition: .4s;
+
+  --theme-default-title: #cccc46;
+  --theme-default-bg: var(--color-black);
 }
 
 body{
@@ -16,4 +33,22 @@ body{
   padding: 0;
   background-color: var(--color-main-bg);
   font-family: var(--font-famaly-main);
+  background: var(--theme-default-bg);
+}
+
+.title{
+  line-height: 1.7;
+  font-size: var(--font-size-title);
+  text-shadow: 2px 1px 3px #6c6b6b;
+  color: var(--theme-default-title);
+  transition: color var(--transition);
+}
+
+img{
+  display: block;
+}
+
+a.active{
+  text-decoration: underline;
+  font-size: larger;
 }

@@ -56,7 +56,7 @@ const Person = ({ setErrorApi }) => {
     <>
       <PersonLinkBack />
       <div>
-        <h1>{personName}</h1>
+        <h1 className="title">{personName}</h1>
 
         <PersonPhoto
           id={personId}

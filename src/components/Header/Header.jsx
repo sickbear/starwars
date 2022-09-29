@@ -1,15 +1,43 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import Favorite from '@components/Favorite'
+import { useTheme, THEME_LIGHT, THEME_DARK, THEME_NEITRAL } from '@context/ThemeProvider'
+import imgDroid from './img/droid.svg'
+import imgLightsaber from './img/lightsaber.svg'
+import imgSpaceStation from './img/space-station.svg'
 import styles from './Header.module.css'
 
 const Header = () => {
+  const [icon, setIcon] = useState(imgSpaceStation)
+  const isTheme = useTheme()
+
+  useEffect(() => {
+    switch (isTheme.theme) {
+      case THEME_LIGHT:
+        setIcon(imgLightsaber)
+        break;
+      case THEME_DARK:
+        setIcon(imgSpaceStation)
+        break;
+      case THEME_NEITRAL:
+        setIcon(imgDroid)
+        break;
+      default:
+        break;
+    }
+  }, [isTheme])
+
   return (
     <>
       <div className={styles.container}>
+        <img className={styles.logo} src={icon} alt="Star Wars" />
         <ul className={styles.list}>
-          <li className=""><Link to="/">Home</Link></li>
-          <li className=""><Link to="/people?page=1">People</Link></li>
+          <li>
+            <NavLink to="/" className={styles.link}>Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/people?page=1" className={styles.link}>People</NavLink>
+          </li>
         </ul>
         <Favorite />
       </div>
