@@ -15,10 +15,10 @@ const PeopleNavigation = ({
 
   return (
     <div className={styles.container}>
-      <Link to={`/people/?page=${counter - 1}`}>
+      <Link to={`/people/?page=${counter - 1}`} className={styles.link}>
         <UiButton text="Previous" onClick={handleChangePrev} disabled={!prev} />
       </Link>
-      <Link to={`/people/?page=${counter + 1}`}>
+      <Link to={`/people/?page=${counter + 1}`} className={styles.link}>
         <UiButton text="Next" onClick={handleChangeNext} disabled={!next} />
       </Link>
     </div>

@@ -1,0 +1,13 @@
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  color: var(--color-white);
+  background: rgba(0, 0, 0, .3);
+  border-radius: var(--border-radius-medium);
+  padding: var(--spacing-medium);
+}
+.list li span{
+  font-weight: bold;
+  border-bottom: 1px dotted var(--color-white);
+}

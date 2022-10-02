@@ -4,8 +4,11 @@
   --color-white: #fff;
   --color-yellow: #97971481;
   --color-blue: #6a83fb;
+  --color-violet: #ae72c2;
+  --color-red: #f75d83;
 
-  --border-radius-small: 10px;
+  --border-radius-small: 3px;
+  --border-radius-medium: 5px;
 
   --spacing-ultrasmall: 5px;
   --spacing-small: 10px;
@@ -47,6 +50,12 @@ body{
 
 img{
   display: block;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a.active{

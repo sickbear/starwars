@@ -30,7 +30,7 @@ const PersonPhoto = ({
 
   return (
     <>
-      <div>
+      <div className={styles.img}>
         <img src={photo} alt={name} />
         <button onClick={dispatchFavoritePeople}>
           {favorite ? 'Удалить из избранного' : 'Добавить в избранное'}

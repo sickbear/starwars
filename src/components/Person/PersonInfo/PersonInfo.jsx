@@ -5,12 +5,12 @@ import styles from './PersonInfo.module.css'
 const PersonInfo = ({ info }) => {
   return (
     <>
-      <div>
-        <ul>
+      <div className={styles.wrapper}>
+        <ul className={styles.list}>
           {info.map(({title, data}) => (
             data && (
               <li key={title}>
-                <span>{title}: {data}</span>
+                <span>{title}:</span> {data}
               </li>
             )
           ))}

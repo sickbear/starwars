@@ -5,7 +5,7 @@ import PersonInfo from '@components/Person/PersonInfo'
 import PersonPhoto from '@components/Person/PersonPhoto'
 import PersonLinkBack from '@components/Person/PersonLinkBack'
 import UiLoading from '@ui/UiLoading'
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
 import { getApiResource } from '@utils/network'
 import { API_PERSON } from '@constants/api'
@@ -58,21 +58,23 @@ const Person = ({ setErrorApi }) => {
       <div>
         <h1 className="title">{personName}</h1>
 
-        <PersonPhoto
-          id={personId}
-          photo={personPhoto}
-          name={personName}
-          favorite={personFavorite}
-          setFavorite={setPersonFavorite}
-        />
+        <div className={styles.wrapper}>
+          <PersonPhoto
+            id={personId}
+            photo={personPhoto}
+            name={personName}
+            favorite={personFavorite}
+            setFavorite={setPersonFavorite}
+          />
 
-        {personInfo && <PersonInfo info={personInfo} />}
+          {personInfo && <PersonInfo info={personInfo} />}
 
-        {personFilms && (
-          <Suspense fallback={<UiLoading />}>
-            <PersonFilms films={personFilms} />
-          </Suspense>
-        )}
+          {personFilms && (
+            <Suspense fallback={<UiLoading />}>
+              <PersonFilms films={personFilms} />
+            </Suspense>
+          )}
+        </div>
       </div>
     </>
   )
