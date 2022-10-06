@@ -25,7 +25,7 @@ const Favorite = () => {
 
   return (
     <>
-      <h1>Favorites</h1>
+      <h1 className="title">Favorites</h1>
       {people.length > 0 ?
         <PeopleList people={people} /> :
         <p>No data</p>

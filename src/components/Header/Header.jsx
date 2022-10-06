@@ -30,15 +30,17 @@ const Header = () => {
   return (
     <>
       <div className={styles.container}>
-        <img className={styles.logo} src={icon} alt="Star Wars" />
-        <ul className={styles.list}>
-          <li>
-            <NavLink to="/" className={styles.link}>Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/people?page=1" className={styles.link}>People</NavLink>
-          </li>
-        </ul>
+        <div className={styles.menu}>
+          <img className={styles.logo} src={icon} alt="Star Wars" />
+          <ul className={styles.list}>
+            <li>
+              <NavLink to="/" className={styles.link}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/people?page=1" className={styles.link}>People</NavLink>
+            </li>
+          </ul>
+        </div>
         <Favorite />
       </div>
     </>

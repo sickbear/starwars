@@ -1,4 +1,5 @@
 .img{
+  position: relative;
   width: 250px;
   height: 350px;
 }
@@ -8,4 +9,20 @@
   border-radius: var(--border-radius-medium);
   object-fit: cover;
   object-position: center center;
+}
+.favorite{
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: -11px;
+  right: -16px;
+  cursor: pointer;
+  
+}
+.favorite img{
+  object-fit: cover;
+  object-position: center;
+  filter: drop-shadow(0 0 2px #000);
 }

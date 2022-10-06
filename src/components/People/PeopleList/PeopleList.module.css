@@ -18,7 +18,7 @@
   color: var(--color-black);
   text-align: center;
 }
-img{
+.img{
   width: 100%;
   height: 260px;
   object-fit: cover;

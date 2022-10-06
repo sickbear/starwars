@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 import {setPersonToFavorite, removePersonToFavorite } from '@store/actions'
+import iconFavorite from './img/favorite.svg'
+import iconFavoriteActive from './img/favorite-active.svg'
 import styles from './PersonPhoto.module.css'
 
 const PersonPhoto = ({ 
@@ -32,8 +34,12 @@ const PersonPhoto = ({
     <>
       <div className={styles.img}>
         <img src={photo} alt={name} />
-        <button onClick={dispatchFavoritePeople}>
-          {favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+        <button className={styles.favorite} onClick={dispatchFavoritePeople}>
+          {
+            favorite ? 
+              <img src={iconFavoriteActive} alt="Удалить из избранного" /> : 
+              <img src={iconFavorite} alt="Добавить в избранное" />
+          }
         </button>
       </div>
     </>
