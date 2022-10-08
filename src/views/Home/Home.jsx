@@ -5,7 +5,7 @@ import styles from './Home.module.css'
 const Home = () => {
   return (
     <>
-      <h1 className="title">home</h1>
+      <h1 className="title">Choose your side</h1>
       <ChooseSide />
     </>
   )

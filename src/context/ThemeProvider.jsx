@@ -1,6 +1,5 @@
-import React from 'react'
-import { useState } from 'react'
-import { useContext } from 'react'
+import React, { useState, useContext } from 'react'
+import { changeCssVariables } from '@services/changeCssVariables'
 
 export const THEME_LIGHT = 'light'
 export const THEME_DARK = 'dark'
@@ -13,6 +12,7 @@ const ThemeProvider = ({ children, ...props }) => {
 
   const change = name => {
     setTheme(name)
+    changeCssVariables(name)
   }
 
   return (

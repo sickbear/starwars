@@ -1,5 +1,7 @@
 .container{
+  min-height: 100vh;
   max-width: var(--width-max);
   margin: 0 auto;
   padding: var(--spacing-large);
+  box-sizing: border-box;
 }

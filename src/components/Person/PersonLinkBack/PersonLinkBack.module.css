@@ -4,6 +4,7 @@
   gap: 3px;
   font-weight: var(--font-bold);
   color: var(--color-yellow);
+  text-shadow: 0 0 40px #000;
   text-decoration: none;
 }
 .img{
