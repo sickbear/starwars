@@ -8,7 +8,7 @@ import imgSpaceStation from './img/space-station.svg'
 import styles from './Header.module.css'
 
 const Header = () => {
-  const [icon, setIcon] = useState(imgSpaceStation)
+  const [icon, setIcon] = useState(imgDroid)
   const isTheme = useTheme()
 
   useEffect(() => {
@@ -38,6 +38,9 @@ const Header = () => {
             </li>
             <li>
               <NavLink to="/people?page=1" className={styles.link}>People</NavLink>
+            </li>
+            <li>
+              <NavLink to="/search" className={styles.link}>Search</NavLink>
             </li>
           </ul>
         </div>

@@ -26,6 +26,10 @@
     0 0 2px var(--color-white),
     0 0 10px var(--color-blue);
 
+  --text-shadow-blue:
+    0 0 2px var(--color-white),
+    0 0 40px var(--color-blue);
+
   --box-shadow-white:
     0 16px 24px 2px rgba(255, 255, 255, 0.02), 
     0 6px 30px 5px rgba(255, 255, 255, 0.04), 
@@ -52,10 +56,14 @@
     #0b0101, #100101, #140101, #180000, #1b0000, #1d0003, #1e0007, #1f000c, #1d0014, #19001a, #110220, #000625
   );
   --theme-neitral-bg: linear-gradient(
-    to right top,
-   #0a0848, #151356, #1f1e64, #292973, #333482, #3b3e89, #434791, #4b5198, #545b98, #5d6498, #676e97, #717796
+    to right top, 
+  #1e2132, #242838, #2a2e3d, #303543, #373c49, #434853, #50545e, #5d6169, #74767c, #8b8b90, #a2a2a4, #b9b9b9
   );
   --theme-default-bg: var(--theme-neitral-bg);
+}
+
+*, *:after, *:before{
+  box-sizing: border-box;
 }
 
 body{

@@ -5,6 +5,7 @@ import People from '@views/People'
 import Person from '@views/Person'
 import Favorite from '@views/Favorite';
 import E404 from '@views/E404'
+import Search from '@views/Search'
 
 export default function() {
 	return (
@@ -12,6 +13,7 @@ export default function() {
       <Route path="/" element={<Home />} />
       <Route path="/people" element={<People />} />
       <Route path="/people/:id" element={<Person />} />
+      <Route path="/search" element={<Search />} />
       <Route path="/favorites" element={<Favorite />} />
       <Route path="*" element={<E404 />} />
     </Routes>
